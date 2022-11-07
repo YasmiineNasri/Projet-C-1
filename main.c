@@ -35,14 +35,21 @@ rep=1; else
 fprintf(fi, "%d %s %s %s %s %d/%d/%d %d\n" ,L.ID, L. Nom, L.Prenom,L.orientation,L.profession, L.date.jour, L.date.mois, L.date.annee);
 }
 }
-fclose(f); fclose(f1); remove(LE); rename("fichier.txt" , LE); return rep;
+fclose(f); fclose(f1); remove(LE); rename("fichier.txt" , LE); return rep;}
 LE Chercher_LE(int id);
 {
-LE L; int rep; FILE * f=fopen(char* LE, "r"); if (f!=NULL)
+LE L; int rep; FILE * f=fopen(char* LE, "r"); 
+if (f!=NULL)
+{
 while(rep==0 && fscanf(f, "%d %s %s %s %d/%d/%d %d\n" ,L.ID, L. Nom, L.Prenom, L.profession, L.date.jour, L.date.mois,L.date.annee) !=EOF)
+{
 if(L.ID==id)
 rep=1;
-fclose(f); if (rep==0)
-L.ID=-1; return p;
+}
+}
+fclose(f); 
+if (rep==0)
+L.ID=-1; 
+return p;}
 
 
